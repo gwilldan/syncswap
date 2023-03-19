@@ -1,14 +1,17 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {Navbar, Trade, Pool, Dashboard} from "./Exports"
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <div className=' bg-slate-500 m-auto text-white'> You are visiting syncswap on the zkSync Era testnet </div>
+      <div><Navbar /></div>
+      <div><Trade /></div>
+      <div><Pool /></div>
+      <div><Dashboard /></div>
     </div>
   )
 }
