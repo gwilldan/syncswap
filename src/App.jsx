@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Navbar, Trade, Pool, Dashboard} from "./Exports"
+import {Navbar, Trade, Pool, Dashboard, Footer, BlockCount} from "./Exports"
 
 
 function App() {
@@ -8,9 +8,11 @@ function App() {
   return (
     <div className=" bg-lightBG font-inter ">
       <div className=' sticky w-full top-0 bg-blur '><Navbar /></div>
-      <div><Trade /></div>
+      <div className=' md:mt-12'><Trade /></div>
       <div><Pool /></div>
       <div><Dashboard /></div>
+      <div><Footer /></div>
+      <div><BlockCount /></div>
     </div>
   )
 }

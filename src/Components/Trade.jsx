@@ -28,10 +28,12 @@ function Trade() {
             
             <div className=' flex justify-between items-center h-[40px]'> {/* this is the top input */}
                 <input type="number" placeholder="0.0" className=' bg-inherit h-full text-3xl w-[70%] focus:outline-none' />
-                <div className=' flex items-center justify-center gap-3 bg-white w-[112px] shadow-lg h-full rounded-3xl '>
+                <div className=' flex items-center justify-center gap-3 bg-white w-fit px-3  shadow-lg h-full rounded-3xl '>
                     <img src={ethLogo} alt="" className=' h-6 ' />
-                    <h2 className=' '>ETH</h2>
-                    <GrDown className=' text-xs'/>
+                    <div className=' flex items-center gap-2'>
+                        <h2 className=' '>ETH</h2>
+                        <GrDown className=' text-sm'/>
+                    </div>
                 </div>
             </div>
 
@@ -66,11 +68,13 @@ function Trade() {
 
 
             <div className=' mt-[-25px] flex justify-between items-center h-[40px]'> {/* this is the bottom input */}
-                <input type="number" placeholder="0.0" className=' bg-inherit h-full text-3xl w-[70%] focus:outline-none' />
-                <div className=' flex items-center justify-center gap-3 bg-white w-[112px] shadow-lg h-full rounded-3xl '>
+                <input type="number" placeholder="0.0" className=' bg-inherit h-full text-3xl w-[70%] focus:outline-none web ' />
+                <div className=' flex items-center justify-center gap-3 bg-white w-fit px-3 shadow-lg h-full rounded-3xl '>
                     <img src={ethLogo} alt="" className=' h-6 ' />
-                    <h2 className=' '>ETH</h2>
-                    <GrDown className=' text-xs'/>
+                    <div className=' flex items-center gap-2'>
+                        <h2 className=' '>USDC</h2>
+                        <GrDown className=' text-sm'/>
+                    </div>
                 </div>
             </div>
 
@@ -87,14 +91,16 @@ function Trade() {
 
 
         {/* The wallet connect sections */}
-        <div className=' flex items-center gap-4 h-[100px] mt-3 py-4 px-[14px] bg-slate-50 rounded-[10px] shadow-sm text-darkBG'>
-            <IoWalletOutline className=' text-2xl' />
-            <div>
-                <h1 className=' font-medium mb-1'>Getting Started</h1>
-                <p className=' text-sm font-normal'>Connect wallet to trade and explore more</p>
+        <button className=' flex items-center justify-between gap-4 h-[100px] md:h-[79px] w-full mt-3 py-4 px-[18px] bg-slate-50 rounded-[10px] shadow- text-darkBG hover:text-darkSlate'>
+            <div className=' flex items-center gap-4 text-left'>
+                <IoWalletOutline className=' text-2xl' />
+                <div>
+                    <h1 className=' font-medium mb-1'>Getting Started</h1>
+                    <p className=' text-sm font-normal'>Connect wallet to trade and explore more</p>
+                </div>
             </div>
-            <GrFormNext className=' text-lg' />
-        </div>
+            <GrFormNext className=' text-lg justify-items-end' />
+        </button>
 
 
         
