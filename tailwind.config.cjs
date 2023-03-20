@@ -17,6 +17,10 @@ module.exports = {
         lightBG: "rgba(225, 225, 225, 0.7)",
         whiteBG: "#fffff",
         textFaint: "rgb(111, 113, 131)"
+      },
+
+      fontFamily: {
+        inter: ["Poppins ", "sans-serif"]
       }
 
     },

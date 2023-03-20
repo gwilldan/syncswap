@@ -1,15 +1,17 @@
 import React from 'react'
 import {MdCandlestickChart} from "react-icons/md"
-import {FiSettings} from "react-icons/fi"
+import {FiArrowDownRight, FiSettings} from "react-icons/fi"
 import {RxReload} from "react-icons/rx"
-import {GrDown} from "react-icons/gr"
+import {GrDown, GrFormNext} from "react-icons/gr"
+import {AiOutlineArrowDown} from "react-icons/ai"
+import {IoWalletOutline} from "react-icons/io5"
 import ethLogo from "../Images/testnet-token-icons-main/ethLogo.png"
 
 
 
 function Trade() {
   return (
-    <div className=' h-[362px] px-2 py-4 mt-5 '>
+    <div className='h-screen px-2 py-4 mt-5 md:w-[480px] md:m-auto'>
 
         <div className=' flex items-center justify-between text-xl text-darkBG h-[34px] pr-1 pl-2 mb-2 '>
             <div><MdCandlestickChart /></div>
@@ -42,21 +44,28 @@ function Trade() {
             </div> 
 
             <div className=" flex justify-between h-[30.75px]">
-                <button className=' w-[75px] border-[0.8px] rounded-lg border-darkBG px-[9px] py-[3px] '>25%</button>
-                <button className=' w-[75px] border-[0.8px] rounded-lg border-darkBG px-[9px] py-[3px] '>50%</button>
-                <button className=' w-[75px] border-[0.8px] rounded-lg border-darkBG px-[9px] py-[3px] '>75%</button>
-                <button className=' w-[75px] border-[0.8px] rounded-lg border-darkBG px-[9px] py-[3px] '>100%</button>
+                <button className=' w-[75px] border-[0.8px] rounded-lg border-darkBG px-[9px] py-[3px] md:w-[97px]'>25%</button>
+                <button className=' w-[75px] border-[0.8px] rounded-lg border-darkBG px-[9px] py-[3px] md:w-[97px]'>50%</button>
+                <button className=' w-[75px] border-[0.8px] rounded-lg border-darkBG px-[9px] py-[3px] md:w-[97px]'>75%</button>
+                <button className=' w-[75px] border-[0.8px] rounded-lg border-darkBG px-[9px] py-[3px] md:w-[97px]'>100%</button>
             </div>
 
 
         </div>
 
 
+
         {/* The bottom Token swap sections */}
-        <div className=' h-[104px] mt-4 py-4 px-[14px] bg-slate-50 rounded-[10px] shadow-sm '>
+        <div className=' h-[104px] mt-3 py-4 px-[14px] bg-slate-50 rounded-[10px] shadow-sm'>
+
+            {/* The circular thing that contains the arrow for switching */}
+            <div className=' text-darkBG border-[5px] border-white bg-slate-100 w-fit p-2 rounded-full m-auto my-[-15px] z-10 relative top-[-25px]'> 
+                    <AiOutlineArrowDown />
+            </div>
 
 
-            <div className=' flex justify-between items-center h-[40px]'> {/* this is the bottom input */}
+
+            <div className=' mt-[-25px] flex justify-between items-center h-[40px]'> {/* this is the bottom input */}
                 <input type="number" placeholder="0.0" className=' bg-inherit h-full text-3xl w-[70%] focus:outline-none' />
                 <div className=' flex items-center justify-center gap-3 bg-white w-[112px] shadow-lg h-full rounded-3xl '>
                     <img src={ethLogo} alt="" className=' h-6 ' />
@@ -65,7 +74,7 @@ function Trade() {
                 </div>
             </div>
 
-            <div className=" my-3 text-[13px] flex justify-between items-center text-textFaint"> {/* this shows the balances of the bottom token */}
+            <div className="mt-3 text-[13px] flex justify-between items-center text-textFaint"> {/* this shows the balances of the bottom token */}
                 <p>$9.70B</p>
                 <div className=' flex gap-2 items-center'>
                     <p>Balance</p>
@@ -73,6 +82,18 @@ function Trade() {
                 </div>
             </div> 
 
+        </div>
+
+
+
+        {/* The wallet connect sections */}
+        <div className=' flex items-center gap-4 h-[100px] mt-3 py-4 px-[14px] bg-slate-50 rounded-[10px] shadow-sm text-darkBG'>
+            <IoWalletOutline className=' text-2xl' />
+            <div>
+                <h1 className=' font-medium mb-1'>Getting Started</h1>
+                <p className=' text-sm font-normal'>Connect wallet to trade and explore more</p>
+            </div>
+            <GrFormNext className=' text-lg' />
         </div>
 
 
