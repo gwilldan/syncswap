@@ -1,17 +1,22 @@
 import React from 'react'
+
+// REACT ICONS
 import {MdCandlestickChart} from "react-icons/md"
-import {FiArrowDownRight, FiSettings} from "react-icons/fi"
+import { FiSettings} from "react-icons/fi"
 import {RxReload} from "react-icons/rx"
 import {GrDown, GrFormNext} from "react-icons/gr"
 import {AiOutlineArrowDown} from "react-icons/ai"
 import {IoWalletOutline} from "react-icons/io5"
+
+// IMAGES
 import ethLogo from "../Images/testnet-token-icons-main/ethLogo.png"
+import usdcLogo from "../Images/testnet-token-icons-main/usdcLogo.png"
 
 
 
 function Trade() {
   return (
-    <div className='h-screen px-2 py-4 mt-5 md:w-[480px] md:m-auto'>
+    <div className='h-[684px] mb-80px px-2 py-4 mt-5 md:w-[480px] md:m-auto'>
 
         <div className=' flex items-center justify-between text-xl text-darkBG h-[34px] pr-1 pl-2 mb-2 '>
             <div><MdCandlestickChart /></div>
@@ -70,7 +75,7 @@ function Trade() {
             <div className=' mt-[-25px] flex justify-between items-center h-[40px]'> {/* this is the bottom input */}
                 <input type="number" placeholder="0.0" className=' bg-inherit h-full text-3xl w-[70%] focus:outline-none web ' />
                 <div className=' flex items-center justify-center gap-3 bg-white w-fit px-3 shadow-lg h-full rounded-3xl '>
-                    <img src={ethLogo} alt="" className=' h-6 ' />
+                    <img src={usdcLogo} alt="" className=' h-6 ' />
                     <div className=' flex items-center gap-2'>
                         <h2 className=' '>USDC</h2>
                         <GrDown className=' text-sm'/>
@@ -99,7 +104,7 @@ function Trade() {
                     <p className=' text-sm font-normal'>Connect wallet to trade and explore more</p>
                 </div>
             </div>
-            <GrFormNext className=' text-lg justify-items-end' />
+            <GrFormNext className=' text-lg justify-items-end ' />
         </button>
 
 
