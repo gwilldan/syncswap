@@ -3,11 +3,12 @@ import {Navbar, Trade, Pool, Dashboard, Footer, BlockCount} from "./Exports"
 
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <div className=" bg-lightBG font-inter overflow-x-hidden">
-      <div className=' sticky w-full top-0 bg-blur z-20'><Navbar /></div>
+    <div className=" bg-lightBG font-inter overflow-x-hidden ">
+      <div className=' fixed w-full top-0 bg-blur z-20'><Navbar toggle={toggle} setToggle={setToggle}/></div>
       <div className=' md:mt-12'><Trade /></div>
       <div className=' hidden'><Pool /></div>
       <div className=' hidden'><Dashboard /></div>
