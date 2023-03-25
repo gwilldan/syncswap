@@ -35,10 +35,10 @@ function Trade() {
                 <input type="number" placeholder="0.0" className=' bg-inherit h-full text-3xl w-[70%] focus:outline-none' />
                 <div className=' flex items-center justify-center gap-3 bg-white w-fit px-3  shadow-lg h-full rounded-3xl '>
                     <img src={ethLogo} alt="" className=' h-6 ' />
-                    <div className=' flex items-center gap-2'>
+                    <button className=' flex items-center gap-2'>
                         <h2 className=' '>ETH</h2>
                         <GrDown className=' text-sm'/>
-                    </div>
+                    </button>
                 </div>
             </div>
 
@@ -76,10 +76,10 @@ function Trade() {
                 <input type="number" placeholder="0.0" className=' bg-inherit h-full text-3xl w-[70%] focus:outline-none web ' />
                 <div className=' flex items-center justify-center gap-3 bg-white w-fit px-3 shadow-lg h-full rounded-3xl '>
                     <img src={usdcLogo} alt="" className=' h-6 ' />
-                    <div className=' flex items-center gap-2'>
+                    <button className=' flex items-center gap-2'>
                         <h2 className=' '>USDC</h2>
                         <GrDown className=' text-sm'/>
-                    </div>
+                    </button>
                 </div>
             </div>
 
