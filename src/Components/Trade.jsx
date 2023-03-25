@@ -106,7 +106,7 @@ function Trade() {
             </div>
             <GrFormNext className=' text-lg justify-items-end ' />
         </button>
-
+        
     </div>
   )
 }
