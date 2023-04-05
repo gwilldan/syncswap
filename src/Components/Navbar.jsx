@@ -3,9 +3,11 @@ import React from 'react'
 // icons
 import {FiMenu} from "react-icons/fi"
 import {BiWater} from "react-icons/bi"
-import {IoSwapVertical} from "react-icons/io5"
+import {HiArrowPath} from "react-icons/hi2"
 import {MdDataUsage} from "react-icons/md"
-import {GrDown} from "react-icons/gr"
+import {FiChevronDown} from "react-icons/fi"
+import {BsFillRocketTakeoffFill} from "react-icons/bs"
+import {SiGitbook} from "react-icons/si"
 
 // images
 import syncIcon from '../Images/syncswap.svg'
@@ -33,37 +35,41 @@ function Navbar({toggle, setToggle}) {
             
             {/* Top Section */}
             <div className=' flex flex-col gap-5 font-medium text-darkBG'>
-                <button className=' flex items-center w-fit h-10 gap-2'>
-                    <IoSwapVertical className=' text-xl' />
-                    <h2>Trade</h2>
+                <button className=' flex items-center w-fit h-10 gap-4'>
+                    <HiArrowPath className=' font-medium text-xl rotate-90' />
+                    <h2 className=' font-normal'>Trade</h2>
                 </button>
 
-                <button className=' flex items-center w-fit h-10 gap-2'>
+                <button className=' flex items-center w-fit h-10 gap-4'>
                     <BiWater className=' text-xl' />
-                    <h2>Pool</h2>
+                    <h2 className=' font-normal'>Pool</h2>
                 </button>
 
-                <button className=' flex items-center w-fit  h-10 gap-2'>
+                <button className=' flex items-center w-fit  h-10 gap-4'>
+                    <BsFillRocketTakeoffFill className=' text-xl' />
+                    <h2 className=' font-normal'>Launch</h2>
+                </button>
+
+                <button className=' flex items-center w-fit  h-10 gap-4'>
                     <MdDataUsage className=' text-xl' />
-                    <h2>Dashboard</h2>
+                    <h2 className=' font-normal'>Portfolio</h2>
+                </button>
+
+                <button className=' flex items-center w-fit  h-10 gap-4'>
+                    <SiGitbook className=' text-xl' />
+                    <h2 className=' font-normal'>Bridge</h2>
                 </button>
 
             </div>
 
             {/* Bottom section */}
-            <div className=' h-[123.5px] flex flex-col gap-4'>
+            <div className=' h-[123.5px] flex flex-col gap-4 justify-end'>
 
-              <div className=' flex justify-between items-center'>
-                <button>Faucet</button>
-              </div>
-              
-              <button className=' flex justify-center items-center gap-2 text-white bg-darkBG rounded-md'>
+              <button className=' flex justify-center items-center gap-2 text-white bg-darkBG rounded-lg h-9 w-[176px] shadow-md'>
                 <img src={ethLogo} alt="eth" className=' h-6 ' />
                 <h>ETH</h>
-                <div className=' text-white'><GrDown className=' text-white'/></div>
+                <div className=' text-white'><FiChevronDown /></div>
               </button>
-
-              <button>Faucet</button>
 
             </div>
           </div>
