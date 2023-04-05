@@ -21,7 +21,7 @@ function Navbar({toggle, setToggle}) {
   return (
     <div className=' backdrop-blur-md '>
         <div className=' bg-darkBG text-white h-[22px] text-xs flex items-center justify-center'>
-          <p>You are visiting SyncSwap on the zkSync Era testnet. </p>
+          <p>You are on the zkSync Era Mainnet. </p>
         </div>
         <div className=' flex items-center justify-between py-2 pr-3 pl-4 h-[58px]'>
             <button><img src={syncIcon} alt="syncIcon" className=' h-[32px] w-[32px] '/></button>
