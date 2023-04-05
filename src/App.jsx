@@ -7,7 +7,7 @@ function App() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className=" bg-lightBG font-inter overflow-x-hidden ">
+    <div className={ toggle? " h-screen overflow-y-hidden font-inter bg-lightBG" : " bg-lightBG font-inter overflow-x-hidden "}>
       <div className=' fixed w-full top-0 bg-blur z-20'><Navbar toggle={toggle} setToggle={setToggle}/></div>
       <div className=' md:mt-12'><Trade /></div>
       <div className=' hidden'><Pool /></div>

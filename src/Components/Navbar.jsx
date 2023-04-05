@@ -31,7 +31,7 @@ function Navbar({toggle, setToggle}) {
 
         {/* THIS IS THE MOBILE NAV BAR */}
         <div className={toggle ? 'z-50 overflow-y-hidden h-screen w-[224px] bg-white absolute top-0 left-0 md:hidden ' : ' hidden'}>
-          <div className=' h-full w-full flex flex-col justify-between pt-12 pb-8 pl-8 pr-4'>
+          <div className=' h-full w-full flex flex-col justify-between pt-12 pb-8 pl-8 pr-4 drop-shadow-2xl'>
             
             {/* Top Section */}
             <div className=' flex flex-col gap-5 font-medium text-darkBG'>
