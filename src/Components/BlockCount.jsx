@@ -2,10 +2,17 @@ import React from 'react'
 
 function BlockCount() {
   return (
-    <div className=' flex justify-end items-center h-[56.8px] gap-2 px-5 text-[13px] pt-[45px] bg-white fixed bottom-0 w-full'> 
+    <div className=' flex justify-between items-center p-2 h-[56.8px] bg-white text-darkBG text-sm fixed bottom-0 w-full drop-shadow-2xl'> 
 
         {/*  this is the server BLock count showing at the bottom  */}
-        
+        <div className=' w-[120px] flex justify-center '>
+          <p>Connect</p>
+        </div>
+
+        <div className=' w-[176px] flex justify-center'>
+          <p>Mainnet</p>
+        </div>
+
     </div>
   )
 }

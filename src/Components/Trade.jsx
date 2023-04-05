@@ -16,7 +16,7 @@ import usdcLogo from "../Images/testnet-token-icons-main/usdcLogo.png"
 
 function Trade() {
   return (
-    <div className='h-[684px] mb-80px px-2 py-4 pt-[96px] mt-5 md:w-[358px] md:m-auto'>
+    <div className='h-[684px] mb-80px px-4 py-4 pt-[74px] mt-5 md:w-[358px] md:m-auto'>
 
         <div className=' flex items-center justify-between text-xl text-darkBG h-[34px] pr-1 pl-2 mb-2 '>
             <div><MdCandlestickChart /></div>
