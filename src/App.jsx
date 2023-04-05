@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import {Navbar, Trade, Pool, Dashboard, Footer, BlockCount} from "./Exports"
+import {Navbar, Trade, Pool, Portfolio, Footer, Launch, Bridge, ConnectNetwork} from "./Exports"
+import {BrowserRouter, Routes, Route, Link} from "react-router-dom"
 
 
 function App() {
@@ -8,12 +9,23 @@ function App() {
 
   return (
     <div className={ toggle? " h-screen overflow-hidden font-inter bg-lightBG" : " bg-lightBG font-inter overflow-x-hidden "}>
-      <div className=' fixed w-full top-0 bg-blur z-20'><Navbar toggle={toggle} setToggle={setToggle}/></div>
-      <div className=' md:mt-12'><Trade /></div>
-      <div className=' hidden'><Pool /></div>
-      <div className=' hidden'><Dashboard /></div>
-      <div><Footer /></div>
-      <div><BlockCount /></div>
+      <BrowserRouter>
+
+        <div className=' fixed w-full top-0 bg-blur z-20'><Navbar Link={Link} toggle={toggle} setToggle={setToggle}/></div>
+        
+        <Routes>
+          <Route path='/' element={<Trade />}></Route>
+          <Route path='/Pool' element={<Pool />}></Route>
+          <Route path='/Launch' element={<Launch />}></Route>
+          <Route path='/Portfolio' element={<Portfolio />}></Route>
+          <Route path='/Bridge' element={<Bridge />}></Route>
+        </Routes>
+        
+        <div><Footer /></div>
+        <div><ConnectNetwork /></div>
+
+      </BrowserRouter>
+      
     </div>
   )
 }

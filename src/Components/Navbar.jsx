@@ -14,7 +14,7 @@ import syncIcon from '../Images/syncswap.svg'
 import ethLogo from "../Images/testnet-token-icons-main/ethLogo.png"
 
 
-function Navbar({toggle, setToggle}) {
+function Navbar({toggle, setToggle, Link}) {
 
  
 
@@ -33,31 +33,31 @@ function Navbar({toggle, setToggle}) {
         <div className={toggle ? 'z-50 overflow-y-hidden h-screen w-[224px] bg-white absolute top-0 left-0 md:hidden ' : ' hidden'}>
           <div className=' h-full w-full flex flex-col justify-between pt-12 pb-8 pl-8 pr-4 drop-shadow-2xl'>
             
-            {/* Top Section */}
+            {/* Top Section and Links */}
             <div className=' flex flex-col gap-5 font-medium text-darkBG'>
                 <button className=' flex items-center w-fit h-10 gap-4'>
                     <HiArrowPath className=' font-medium text-xl rotate-90' />
-                    <h2 className=' font-normal'>Trade</h2>
+                    <Link to="/" onClick={() => setToggle(false)} className=' font-normal'>Trade</Link>
                 </button>
 
                 <button className=' flex items-center w-fit h-10 gap-4'>
                     <BiWater className=' text-xl' />
-                    <h2 className=' font-normal'>Pool</h2>
+                    <Link to="/Pool" onClick={() => setToggle(false)} className=' font-normal'>Pool</Link>
                 </button>
 
                 <button className=' flex items-center w-fit  h-10 gap-4'>
                     <BsFillRocketTakeoffFill className=' text-xl' />
-                    <h2 className=' font-normal'>Launch</h2>
+                    <Link onClick={() => setToggle(false)} to="/Launch" className=' font-normal'>Launch</Link>
                 </button>
 
                 <button className=' flex items-center w-fit  h-10 gap-4'>
                     <MdDataUsage className=' text-xl' />
-                    <h2 className=' font-normal'>Portfolio</h2>
+                    <Link onClick={() => setToggle(false)} to="/Portfolio"  className=' font-normal'>Portfolio</Link>
                 </button>
 
                 <button className=' flex items-center w-fit  h-10 gap-4'>
                     <SiGitbook className=' text-xl' />
-                    <h2 className=' font-normal'>Bridge</h2>
+                    <Link onClick={() => setToggle(false)} to="/Bridge"  className=' font-normal'>Bridge</Link>
                 </button>
 
             </div>
