@@ -15,15 +15,17 @@ function ConnectNetwork() {
           <p>Connect</p>
         </button>
 
-        <button className=' w-[176px] flex justify-center items-center gap-6'>
-          <div className=' flex items-center justify-center gap-2'>
+        <div className=' w-[176px] flex justify-center items-center gap-6'>
+          <button className=' flex items-center justify-center gap-2'>
             <img src={eraMainnet} alt="svg"/>
             <p>Mainnet</p>
-          </div>
+          </ button>
 
-          <BiChevronDown className=' text-2xl'/>
+          <button>
+            <BiChevronDown className=' text-2xl'/>
+          </button>
 
-        </button>
+        </div>
 
     </div>
   )

@@ -8,7 +8,7 @@ function App() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <div className={ toggle? " h-screen overflow-hidden font-inter bg-lightBG" : " bg-lightBG font-inter overflow-x-hidden "}>
+    <div className={ toggle? " h-screen overflow-y-hidden font-inter bg-lightBG" : " bg-lightBG font-inter "}>
       <BrowserRouter>
 
         <div className=' fixed w-full top-0 bg-blur z-20'><Navbar Link={Link} toggle={toggle} setToggle={setToggle}/></div>
