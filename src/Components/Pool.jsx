@@ -3,10 +3,12 @@ import {BiChevronDown, BiCross} from "react-icons/bi"
 
 function Pool() {
   return (
-    <div>
 
-      {/* top caption #POOLS */}
-      <div>
+    <div>
+        <div className=' h-screen px-4  text-center'>
+
+          {/* top caption #POOLS */}
+      <div className=' pt-[150px]'>
         <h1>Pools</h1>
         <p>Put your assets to work. Deposit to liquidity pools to earn</p>
       </div>
@@ -23,8 +25,11 @@ function Pool() {
           </button>
 
       </div>
-
+    
+        
+        </div>
     </div>
+
   )
 }
 
