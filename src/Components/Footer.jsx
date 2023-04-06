@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className=' text-center text-[15px] grid grid-cols-2 justify-items-center pt-16 px-12 gap-8 text-textNormal md:grid-cols-4 mt-[20px] mb-[100px]'>
+    <div className=' text-center text-[15px] grid grid-cols-2 justify-items-center pt-16 px-12 gap-8 text-textNormal md:grid-cols-4 mt-[20px] pb-[100px]'>
 
         {/* community */}
         <div>
