@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 // icons
 import {FiMenu} from "react-icons/fi"
@@ -6,7 +6,7 @@ import {BiWater} from "react-icons/bi"
 import {HiArrowPath} from "react-icons/hi2"
 import {MdDataUsage} from "react-icons/md"
 import {FiChevronDown} from "react-icons/fi"
-import {BsFillRocketTakeoffFill} from "react-icons/bs"
+import { BsFillRocketTakeoffFill} from "react-icons/bs"
 import {SiGitbook} from "react-icons/si"
 
 // images
@@ -17,18 +17,46 @@ import ethLogo from "../Images/testnet-token-icons-main/ethLogo.png"
 function Navbar({toggle, setToggle, Link}) {
 
   const toggleOff = () => {
-    setToggle(false)
+    setToggle(false);
   }
 
+  const [hover, setHover] = useState(false);
 
   return (
     <div className=' backdrop-blur-md '>
         <div className=' bg-darkBG text-white h-[22px] text-xs flex items-center justify-center'>
           <p>You are on the zkSync Era Mainnet. </p>
         </div>
-        <div className=' flex items-center justify-between py-2 pr-3 pl-4 h-[58px]'>
+        <div className=' flex items-center gap-4 py-2 pr-3 pl-4 h-[58px] justify-between md:justify-start'>
             <button><img src={syncIcon} alt="syncIcon" className=' h-[32px] w-[32px] '/></button>
-            <button ><FiMenu onClick={() => setToggle(!toggle)} className=' text-2xl text-darkBG font-extrabold '/></button>
+
+            {/* Tap and PC Links */}
+            <div className=' md:text-darkSlate md:flex md:items-center md:gap-8 md:text-sm md:ml-8 hidden'>
+              <Link to="/" onClick={toggleOff} className=' group flex items-center w-fit h-10 gap-4'>
+                <h1 className=' group-hover:text-darkBG' >Trade</h1>
+              </Link>
+
+              <Link to="/Pool" onClick={toggleOff} className='group flex items-center w-fit h-10 gap-1 '>
+                <h1 className=' group-hover:text-darkBG'>Pool</h1>
+                <FiChevronDown className=' transition-all ease-linear duration-100 group-hover:rotate-180 group-hover:text-darkBG' />
+              </Link>
+
+              <Link to="/Launch" onClick={toggleOff} className=' group flex items-center w-fit  h-10 gap-4'>
+                <h1 className=' group-hover:text-darkBG'>Launch</h1>
+              </Link>
+
+              <Link to="/Portfolio" onClick={toggleOff} className=' group flex items-center w-fit  h-10 gap-4'>
+                <h1 className=' group-hover:text-darkBG'>Portfolio</h1>
+              </Link>
+
+              <Link to="/Bridge" onClick={toggleOff} className='group flex items-center w-fit  h-10 gap-4'>
+                <h1 className=' group-hover:text-darkBG'>Bridge</h1>
+              </Link>
+
+            </div>
+
+            {/* HAMBURGER BUTTON FOR MOBILE */}
+            <button className=' md:hidden'><FiMenu onClick={() => setToggle(!toggle)} className=' text-2xl text-darkBG font-extrabold '/></button>
          </div>
 
 
