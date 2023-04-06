@@ -27,11 +27,39 @@ module.exports = {
         inter: ["Poppins ", "sans-serif"]
       },
 
-      
+      keyframes: {
+        'slide':  {
+            '0%' : {
+              '-webkit-transform': 'translateX(-224px)',
+              'transform': 'translateX(-224px)',
+            }, 
+            '100%' : {
+              '-webkit-transform': 'translateX(0)',
+                      'transform': 'translateX(0)'
+            } 
+        },
 
-  }, 
+        'reverse':  {
+          '0%' : {
+            '-webkit-transform': 'translateX(0)',
+            'transform': 'translateX(0)',
+          }, 
+          '100%' : {
+            '-webkit-transform': 'translateX(-224px)',
+                    'transform': 'translateX(-224px)',
+                    'display': 'hidden'
+          } 
+      },
+      },
 
-},
+      animation: {
+        'slide': 'slide 0.3s linear',
+        'reverse': 'reverse 0.3s linear '
+      },
+
+    }
+
+  },
 
   plugins: [],
 

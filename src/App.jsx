@@ -19,6 +19,7 @@ function App() {
           <Route path='/Launch' element={<Launch />}></Route>
           <Route path='/Portfolio' element={<Portfolio />}></Route>
           <Route path='/Bridge' element={<Bridge />}></Route>
+          <Route path='/*' element={<Trade />}></Route>
         </Routes>
         
         <div><Footer /></div>

@@ -30,35 +30,35 @@ function Navbar({toggle, setToggle, Link}) {
 
 
         {/* THIS IS THE MOBILE NAV BAR */}
-        <div className={toggle ? 'z-50 overflow-y-hidden h-screen w-[224px] bg-white absolute top-0 left-0 md:hidden ' : ' hidden'}>
+        <div className={toggle ? ' animate-slide z-50 overflow-y-hidden h-screen w-[224px] bg-white absolute top-0 left-0 md:hidden ' : ' animate-reverse hidden '}>
           <div className=' h-full w-full flex flex-col justify-between pt-12 pb-8 pl-8 pr-4 drop-shadow-2xl'>
             
             {/* Top Section and Links */}
             <div className=' flex flex-col gap-5 font-medium text-darkBG'>
-                <button className=' flex items-center w-fit h-10 gap-4'>
+                <Link to="/" onClick={() => setToggle(false)} className=' flex items-center w-fit h-10 gap-4'>
                     <HiArrowPath className=' font-medium text-xl rotate-90' />
-                    <Link to="/" onClick={() => setToggle(false)} className=' font-normal'>Trade</Link>
-                </button>
+                    <h1 className=' font-normal'>Trade</h1>
+                </Link>
 
-                <button className=' flex items-center w-fit h-10 gap-4'>
+                <Link to="/Pool" onClick={() => setToggle(false)} className=' flex items-center w-fit h-10 gap-4'>
                     <BiWater className=' text-xl' />
-                    <Link to="/Pool" onClick={() => setToggle(false)} className=' font-normal'>Pool</Link>
-                </button>
+                    <h1 className=' font-normal'>Pool</h1>
+                </Link>
 
-                <button className=' flex items-center w-fit  h-10 gap-4'>
+                <Link to="/Launch" onClick={() => setToggle(false)} className=' flex items-center w-fit  h-10 gap-4'>
                     <BsFillRocketTakeoffFill className=' text-xl' />
-                    <Link onClick={() => setToggle(false)} to="/Launch" className=' font-normal'>Launch</Link>
-                </button>
+                    <h1 className=' font-normal'>Launch</h1>
+                </Link>
 
-                <button className=' flex items-center w-fit  h-10 gap-4'>
+                <Link to="/Portfolio" onClick={() => setToggle(false)} className=' flex items-center w-fit  h-10 gap-4'>
                     <MdDataUsage className=' text-xl' />
-                    <Link onClick={() => setToggle(false)} to="/Portfolio"  className=' font-normal'>Portfolio</Link>
-                </button>
+                    <h1 className=' font-normal'>Portfolio</h1>
+                </Link>
 
-                <button className=' flex items-center w-fit  h-10 gap-4'>
+                <Link to="/Bridge" onClick={() => setToggle(false)} className=' flex items-center w-fit  h-10 gap-4'>
                     <SiGitbook className=' text-xl' />
-                    <Link onClick={() => setToggle(false)} to="/Bridge"  className=' font-normal'>Bridge</Link>
-                </button>
+                    <h1 className=' font-normal'>Bridge</h1>
+                </Link>
 
             </div>
 
